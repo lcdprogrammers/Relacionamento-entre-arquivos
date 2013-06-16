@@ -1,0 +1,1 @@
+void appPrintf(char *str);
