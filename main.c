@@ -5,14 +5,9 @@
  */
 
 #include <stdio.h>
-#include "headers/appFunctions.h"
+#include "headers/app.h"
 
 int main()
 {
 	appPrintf("teste");
-}
-
-appPrintf(char *str)
-{
-	printf("\n%s\n\n", str);
 }
