@@ -6,17 +6,49 @@
 #include "headers/service.h"
 #include "headers/customer_service.h"
 
+#define CUSTOMER     1
+#define SERVICE      2
+#define CONSULTATION 3
+#define INSERT       1
+#define EDIT         2
+#define DELETE       3
+#define SELECT       4
+#define LIST         5
+
 int main()
 {
-	int option = 0;
+	int reg = 0, option = 0;
 	
-	system("clear");
+	struct {
+		char name[50];
+		char address[50];
+		int  age;
+		char phone[10];
+	} customer;
 	
-	option = appMainMenu();
+	clearScreen();
+	reg = appMainMenu();
 	
-	switch (option) {
-		case 1:  appPrintf("Clientes");  break;
-		case 2:  appPrintf("Serviços");  break;
-		default: appPrintf("Consultas");
+	clearScreen();
+	option = appMenu();
+	
+	if (reg == CUSTOMER) {
+		switch (option) {
+			case INSERT:
+				appPrintf("INSERIR CLIENTE");
+				break;
+			case EDIT:
+				appPrintf("EDITAR CLIENTE");
+				break;
+			case DELETE:
+				appPrintf("APAGAR CLIENTE");
+				break;
+			case SELECT:
+				appPrintf("SELECIONAR UM CLIENTE");
+				break;
+			default:
+				appPrintf("LISTAR TODOS");
+		}
 	}
+	
 }
