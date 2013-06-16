@@ -12,17 +12,11 @@ int main()
 	
 	system("clear");
 	
-	printf("MENU\n=============\n\n");
-	printf("( 1 ) - Clientes.\n");
-	printf("( 2 ) - Serviços.\n");
-	printf("( 3 ) - Consultas.\n\n");
-	
-	printf("Opção: ");
-	scanf("%d", &option);
+	option = appMainMenu();
 	
 	switch (option) {
-		case 1: appPrintf("Clientes"); break;
-		case 2: appPrintf("Serviços"); break;
+		case 1:  appPrintf("Clientes");  break;
+		case 2:  appPrintf("Serviços");  break;
 		default: appPrintf("Consultas");
 	}
 }
