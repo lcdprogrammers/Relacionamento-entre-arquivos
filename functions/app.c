@@ -19,7 +19,7 @@ int appMainMenu()
 	printf("3) - Consultas.\n\n");
 	
 	printf("Opção: ");
-	scanf("%d", &option);
+	scanf(" %d", &option);
 	
 	return option;
 }
@@ -36,7 +36,7 @@ int appMenu()
 	printf("5) Listar todos.\n\n");
 	
 	printf("Opção: ");
-	scanf("%d", &option);
+	scanf(" %d", &option);
 	
 	return option;
 }
